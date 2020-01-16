@@ -1,0 +1,9 @@
+version: '2'
+services:
+  generate_docs_service:
+    build: .
+    image: miikahuusko/swagger2markup
+
+    # Using docker-compose only to be able to relatively link volume to swagger container
+    volumes:
+      - ./_build:/app
